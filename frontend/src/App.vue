@@ -1,13 +1,20 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/contact">Contact</router-link>
-        </div>
-        <router-view />
+        <layout>
+            <router-view />
+        </layout>
     </div>
 </template>
+<script>
+import Layout from './components/Layout/Layout.vue';
 
+export default {
+    name: 'App',
+    components: {
+        Layout,
+    },
+};
+</script>
 <style lang="scss">
 @import url('./styles/globals.scss');
 </style>
