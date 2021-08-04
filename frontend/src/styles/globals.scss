@@ -1,6 +1,10 @@
 @import 'normalize.scss';
 @import 'mixins.scss';
 
+* {
+    box-sizing: border-box;
+}
+
 .container {
     margin: auto;
     padding: 0 2rem;
