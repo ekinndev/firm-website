@@ -6,4 +6,12 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.footer {
+    border-top: 1px solid;
+    width: 100%;
+    position: fixed;
+    padding: 1rem;
+    bottom: 0;
+}
+</style>
