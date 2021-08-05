@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import i18n from '../main';
 
 Vue.use(Vuex);
 
@@ -11,8 +12,10 @@ export default new Vuex.Store({
         changeLanguage(state) {
             if (state.lang === 'TR') {
                 state.lang = 'EN';
+                i18n.locale = 'EN';
             } else {
                 state.lang = 'TR';
+                i18n.locale = 'TR';
             }
         },
     },
