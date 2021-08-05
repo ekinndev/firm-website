@@ -8,4 +8,5 @@ export default {
     C# 8.0, which was released in September 2019. C# is a modern language. C#'s development team is led by
     Anders Hejlsberg, the creator of Delphi.`,
     'cur-language-text': 'Current Language',
+    'contact-page-text': 'This is a contact page',
 };

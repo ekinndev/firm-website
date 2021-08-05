@@ -24,11 +24,11 @@ export default {
             </a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <router-link to="/" class="nav-item">Home</router-link>
+                    <router-link to="/" class="nav-item">{{ $t('message.Home') }}</router-link>
                 </li>
 
                 <li class="nav-item">
-                    <router-link to="/contact" class="nav-item">Contact</router-link>
+                    <router-link to="/contact" class="nav-item">{{ $t('message.Contact') }}</router-link>
                 </li>
             </ul>
             <div class="hamburger" @click="mobileMenu(this)">

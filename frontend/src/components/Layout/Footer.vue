@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">this is footer</div>
+    <div class="footer">{{ $t('message.Footer-text') }}</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <h1>Welcome to my example intl i18n app</h1>
+    <h1>{{ $t('message.Intro Text') }}</h1>
 </template>
 
 <script>
