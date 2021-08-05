@@ -1,18 +1,18 @@
 <script>
-import { mapMutations, mapState } from 'vuex';
-
+import { mapMutations } from 'vuex';
+import LanguageSelector from '../LocaleSelector.vue';
 export default {
+    components: {
+        LanguageSelector,
+    },
     methods: {
-        ...mapMutations(['changeLanguage', 'toggleModal']),
+        ...mapMutations(['toggleModal']),
         mobileMenu() {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         },
-    },
-    computed: {
-        ...mapState(['lang']),
     },
 };
 </script>
@@ -40,9 +40,7 @@ export default {
                 <span class="bar"></span>
             </div>
         </nav>
-        <button @click="changeLanguage" class="toggleLanguage">
-            {{ lang === 'TR' ? 'EN' : 'TR' }}
-        </button>
+        <language-selector />
     </header>
 </template>
 
@@ -56,14 +54,6 @@ export default {
 .header {
     border-bottom: 1px solid #e2e8f0;
     position: relative;
-}
-.toggleLanguage {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .navbar {
