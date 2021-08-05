@@ -7,6 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         lang: 'TR',
+        showModal: false,
     },
     mutations: {
         changeLanguage(state) {
@@ -17,6 +18,9 @@ export default new Vuex.Store({
                 state.lang = 'TR';
                 i18n.locale = 'TR';
             }
+        },
+        toggleModal(state) {
+            state.showModal = !state.showModal;
         },
     },
     actions: {},

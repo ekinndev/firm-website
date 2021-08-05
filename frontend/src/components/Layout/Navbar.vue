@@ -3,7 +3,7 @@ import { mapMutations, mapState } from 'vuex';
 
 export default {
     methods: {
-        ...mapMutations(['changeLanguage']),
+        ...mapMutations(['changeLanguage', 'toggleModal']),
         mobileMenu() {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
@@ -29,6 +29,9 @@ export default {
 
                 <li class="nav-item">
                     <router-link to="/contact" class="nav-item">{{ $t('message.Contact') }}</router-link>
+                </li>
+                <li class="nav-item">
+                    <button @click="toggleModal">Login</button>
                 </li>
             </ul>
             <div class="hamburger" @click="mobileMenu(this)">
