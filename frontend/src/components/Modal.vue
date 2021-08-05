@@ -2,13 +2,19 @@
     <div class="modal-parent">
         <div class="backdrop" @click="toggleModal"></div>
 
-        <div class="modal"></div>
+        <div class="modal">
+            <locale-selector />
+        </div>
     </div>
 </template>
 
 <script>
 import { mapMutations } from 'vuex';
+import LocaleSelector from '../components/LocaleSelector.vue';
 export default {
+    components: {
+        LocaleSelector,
+    },
     methods: {
         ...mapMutations(['toggleModal']),
     },
@@ -35,6 +41,7 @@ export default {
     align-items: center;
 }
 .modal {
+    position: relative;
     width: 500px;
     height: 500px;
     background: #fff;
