@@ -6,9 +6,13 @@ import store from './store';
 import VueI18n from 'vue-i18n';
 import translationsEn from './locales/en';
 import translationsTr from './locales/tr';
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);
+
+Vue.component('v-select', vSelect);
 
 const messages = {
     EN: {
