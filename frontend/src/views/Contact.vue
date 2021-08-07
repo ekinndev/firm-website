@@ -4,7 +4,7 @@
         <div class="form">
             <form @submit="onSubmit">
                 <form-input
-                    label="name"
+                    :label="$t('message.name_field')"
                     name="name"
                     :value="name.value"
                     @input="onInput"
@@ -12,7 +12,7 @@
                     :hasError="name.hasError"
                 />
                 <form-input
-                    label="email"
+                    :label="$t('message.email_field')"
                     name="email"
                     :value="email.value"
                     @input="onInput"
@@ -20,7 +20,7 @@
                     :hasError="email.hasError"
                 />
                 <form-input
-                    label="phoneNumber"
+                    :label="$t('message.phone_number_field')"
                     name="phoneNumber"
                     :value="phoneNumber.value"
                     :error="phoneNumber.errText"
@@ -29,7 +29,7 @@
                 />
                 <v-select :options="selectOptions" v-model="country.value" />
                 <form-input
-                    label="message"
+                    :label="$t('message.message_field')"
                     type="text"
                     name="message"
                     :value="message.value"
@@ -37,7 +37,7 @@
                     :hasError="message.hasError"
                     @input="onInput"
                 />
-                <button>Send</button>
+                <button>{{ $t('message.send_button_text') }}</button>
             </form>
         </div>
     </div>
@@ -52,37 +52,28 @@ export default {
     },
     computed: {
         selectOptions() {
-            return [
-                { code: 'TR', label: 'Turkey' },
-                { code: 'US', label: 'United States of America' },
-                { code: 'GB', label: 'United Kingdom' },
-                { code: 'DE', label: 'Germany' },
-                { code: 'SE', label: 'Sweden' },
-                { code: 'KE', label: 'Kenya' },
-                { code: 'BR', label: 'Brazil' },
-                { code: 'ZW', label: 'Zimbabwe' },
-            ];
+            return this.$t('message.countries');
         },
     },
     methods: {
         async onSubmit(e) {
             e.preventDefault();
             if (!this.name.value) {
-                this.name.errText = 'Required Field';
+                this.name.errText = this.$t('message.required-text');
                 this.name.hasError = true;
             } else {
                 this.name.errText = '';
                 this.name.hasError = false;
             }
             if (!this.phoneNumber.value) {
-                this.phoneNumber.errText = 'Required Field';
+                this.phoneNumber.errText = this.$t('message.required-text');
                 this.phoneNumber.hasError = true;
             } else {
                 this.phoneNumber.errText = '';
                 this.phoneNumber.hasError = false;
             }
             if (!this.message.value) {
-                this.message.errText = 'Required Field';
+                this.message.errText = this.$t('message.required-text');
                 this.message.hasError = true;
             } else {
                 this.message.errText = '';
@@ -90,7 +81,7 @@ export default {
             }
 
             if (!this.email.value.includes('@')) {
-                this.email.errText = 'Please enter an valid email';
+                this.email.errText = this.$t('message.valid-email-text');
                 this.email.hasError = true;
             } else {
                 this.email.errText = '';

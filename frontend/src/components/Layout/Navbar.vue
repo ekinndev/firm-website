@@ -10,6 +10,13 @@ export default {
     },
     computed: {
         ...mapState(['user']),
+        getRouteName() {
+            if (this.$route.name === 'Sample') {
+                return this.$t('message.home-page-name');
+            } else if (this.$route.name === 'Contact') {
+                return this.$t('message.contact-page-name');
+            }
+        },
     },
     methods: {
         ...mapMutations(['toggleModal']),
@@ -30,7 +37,7 @@ export default {
                     <div class="logo"></div>
                 </a>
                 <p>
-                    {{ $route.name }}
+                    {{ getRouteName }}
                 </p>
             </div>
             <ul class="nav-menu">
@@ -45,7 +52,7 @@ export default {
                     <user-info />
                 </li>
                 <li class="nav-item" v-if="!user">
-                    <button @click="toggleModal">Login</button>
+                    <button @click="toggleModal">{{ $t('message.login_button_text') }}</button>
                 </li>
             </ul>
             <div class="hamburger" @click="mobileMenu(this)">

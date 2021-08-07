@@ -4,7 +4,7 @@
             <div class="form">
                 <form @submit="onSubmit">
                     <form-input
-                        label="name"
+                        :label="$t('message.name_field')"
                         name="name"
                         :value="name.value"
                         @input="onInput"
@@ -12,7 +12,7 @@
                         :hasError="name.hasError"
                     />
                     <form-input
-                        label="email"
+                        :label="$t('message.email_field')"
                         name="email"
                         :value="email.value"
                         @input="onInput"
@@ -20,7 +20,7 @@
                         :hasError="email.hasError"
                     />
                     <form-input
-                        label="password"
+                        :label="$t('message.password_field')"
                         type="password"
                         name="password"
                         :value="password.value"
@@ -28,7 +28,7 @@
                         :hasError="password.hasError"
                         @input="onInput"
                     />
-                    <button :disabled="loading">Login</button>
+                    <button :disabled="loading">{{ $t('message.login_button_text') }}</button>
                 </form>
             </div>
         </Modal>
@@ -66,7 +66,7 @@ export default {
         async onSubmit(e) {
             e.preventDefault();
             if (!this.name.value) {
-                this.name.errText = 'Required Field';
+                this.name.errText = this.$t('message.required-text');
                 this.name.hasError = true;
             } else {
                 this.name.errText = '';
@@ -74,14 +74,14 @@ export default {
             }
 
             if (!this.email.value.includes('@')) {
-                this.email.errText = 'Please enter an valid email';
+                this.email.errText = this.$t('message.valid-email-text');
                 this.email.hasError = true;
             } else {
                 this.email.errText = '';
                 this.email.hasError = false;
             }
             if (this.password.value.length < 6) {
-                this.password.errText = 'Please enter a password 6 characters or more';
+                this.password.errText = this.$t('message.6-characters-password-text');
                 this.password.hasError = true;
             } else {
                 this.password.errText = '';
