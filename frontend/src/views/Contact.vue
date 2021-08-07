@@ -68,6 +68,9 @@ export default {
             if (!this.phoneNumber.value) {
                 this.phoneNumber.errText = this.$t('message.required-text');
                 this.phoneNumber.hasError = true;
+            } else if (!/^\d+$/.test(this.phoneNumber.value)) {
+                this.phoneNumber.errText = this.$t('message.valid-phone-text');
+                this.phoneNumber.hasError = true;
             } else {
                 this.phoneNumber.errText = '';
                 this.phoneNumber.hasError = false;

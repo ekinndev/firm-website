@@ -34,4 +34,5 @@ export default {
         { code: 'BR', label: 'Brazilya' },
         { code: 'ZW', label: 'Zimbabwe' },
     ],
+    'valid-phone-text': 'Geçerli bir telefon numarası giriniz',
 };

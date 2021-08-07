@@ -31,4 +31,5 @@ export default {
         { code: 'BR', label: 'Brazil' },
         { code: 'ZW', label: 'Zimbabwe' },
     ],
+    'valid-phone-text': 'Enter a valid phone number',
 };
