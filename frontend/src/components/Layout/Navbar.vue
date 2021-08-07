@@ -33,9 +33,9 @@ export default {
     <header class="header">
         <nav class="navbar">
             <div class="nav-info">
-                <a href="/" class="nav-logo">
+                <router-link to="/" class="nav-logo">
                     <div class="logo"></div>
-                </a>
+                </router-link>
                 <p>
                     {{ getRouteName }}
                 </p>
