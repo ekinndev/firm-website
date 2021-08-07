@@ -4,6 +4,7 @@
 
         <div class="modal">
             <locale-selector />
+            <h2>{{ title }}</h2>
         </div>
     </div>
 </template>
@@ -12,6 +13,9 @@
 import { mapMutations } from 'vuex';
 import LocaleSelector from '../components/LocaleSelector.vue';
 export default {
+    props: {
+        title: { type: String, defaultValue: '' },
+    },
     components: {
         LocaleSelector,
     },
