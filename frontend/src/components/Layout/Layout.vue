@@ -47,7 +47,7 @@ import Navbar from './Navbar.vue';
 import Footer from './Footer.vue';
 import Modal from '../Modal.vue';
 import FormInput from '../FormInput.vue';
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 
 export default {
     name: 'Layout',
@@ -62,6 +62,7 @@ export default {
     },
     methods: {
         ...mapActions(['login']),
+        ...mapMutations(['toggleModal']),
         async onSubmit(e) {
             e.preventDefault();
             if (!this.name.value) {
@@ -90,6 +91,11 @@ export default {
             if (this.name.hasError || this.email.hasError || this.password.hasError) return;
 
             await this.login({ name: this.name.value, email: this.email.value });
+
+            this.name = { value: '', hasError: null, errText: '' };
+            this.email = { value: '', hasError: null, errText: '' };
+            this.password = { value: '', hasError: null, errText: '' };
+            this.toggleModal();
         },
         onInput(e) {
             this[e.name].value = e.value;
