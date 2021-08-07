@@ -52,5 +52,6 @@ export default {
     background: #fff;
     z-index: 11;
     border-radius: 8px;
+    text-align: center;
 }
 </style>
