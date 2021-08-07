@@ -32,9 +32,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .form-input {
     min-height: 70px;
+
+    input {
+        width: 100%;
+    }
 }
 .input-text {
     padding: 5px;
