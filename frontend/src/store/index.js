@@ -25,6 +25,9 @@ export default new Vuex.Store({
             commit('setUser', data);
             commit('toggleLoading');
         },
+        logout({ commit }) {
+            commit('logout');
+        },
     },
     mutations: {
         changeLanguage(state) {
@@ -44,6 +47,9 @@ export default new Vuex.Store({
         },
         toggleModal(state) {
             state.showModal = !state.showModal;
+        },
+        logout(state) {
+            state.user = null;
         },
     },
     modules: {},
