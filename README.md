@@ -1,17 +1,17 @@
-# Firm Website
+# Intl Example
 
-This is a example of 3 pages firm website
+This is a example of vue-i18n package
 
-For pre commit hook to work properly you can just type on console on root folder /
+For pre commit hook to work properly you can just type on console on root folder /(optional)
 
     npm install or yarn install
 
 # Prerequisites
 
 1. Docker Desktop must be installed. https://www.docker.com/get-started
-2. Node.js LTS must be installed https://nodejs.dev/download
+2. Node.js LTS must be installed https://nodejs.dev/download(if you want to use pre commit hook)
 
-Then just type
+Then just type at / folder
 
     docker-compose up
 
