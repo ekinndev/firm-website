@@ -19,9 +19,14 @@ export default {
 <template>
     <header class="header">
         <nav class="navbar">
-            <a href="/" class="nav-logo">
-                <div class="logo"></div>
-            </a>
+            <div class="nav-info">
+                <a href="/" class="nav-logo">
+                    <div class="logo"></div>
+                </a>
+                <p>
+                    {{ $route.name }}
+                </p>
+            </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <router-link to="/" class="nav-item">{{ $t('message.Home') }}</router-link>
@@ -50,6 +55,10 @@ export default {
     background-size: cover;
     width: 50px;
     height: 50px;
+}
+.nav-info {
+    display: flex;
+    gap: 1rem;
 }
 .header {
     border-bottom: 1px solid #e2e8f0;
