@@ -5,6 +5,7 @@
         <div class="modal">
             <locale-selector />
             <h2>{{ title }}</h2>
+            <slot />
         </div>
     </div>
 </template>
