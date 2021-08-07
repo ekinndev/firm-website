@@ -111,4 +111,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.form {
+    padding: 10px;
+}
+</style>
