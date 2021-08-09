@@ -11,7 +11,7 @@ For pre commit hook to work properly you can just type on console on root folder
 1. Docker Desktop must be installed. https://www.docker.com/get-started
 2. Node.js LTS must be installed https://nodejs.dev/download(if you want to use pre commit hook)
 
-Then just type at / folder
+Then just type the command below at / folder While docker is open
 
     docker-compose up
 
