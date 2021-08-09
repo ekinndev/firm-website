@@ -1,22 +1,29 @@
-# Intl Example
+# frontend
 
-This is a example of vue-i18n package
+## Project setup
 
-For pre commit hook to work properly you can just type on console on root folder /(optional)
+```
+npm install
+```
 
-    npm install or yarn install
+### Compiles and hot-reloads for development
 
-# Prerequisites
+```
+npm run serve
+```
 
-1. Docker Desktop must be installed. https://www.docker.com/get-started
-2. Node.js LTS must be installed https://nodejs.dev/download(if you want to use pre commit hook)
+### Compiles and minifies for production
 
-Then just type at / folder
+```
+npm run build
+```
 
-    docker-compose up
+### Lints and fixes files
 
-Frontend will be running on port 8080:8080
+```
+npm run lint
+```
 
-Backend will be running on port 3000:3000
+### Customize configuration
 
-MongoDB will be running on 37017:27017
+See [Configuration Reference](https://cli.vuejs.org/config/).
